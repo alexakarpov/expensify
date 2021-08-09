@@ -1,10 +1,10 @@
 import { createStore } from 'redux'
 
-let makeAction = (type, value) => {
-  return { type, value: value ? value : 1 }
+let makeAction = (type, value = 1) => {
+  return { type, value }
 }
 
-const store = createStore((state = { count: 0 }, action) => {
+const reducer = (state = { count: 0 }, action) => {
   console.log('store creation - ', action)
   switch (action.type) {
     case 'INCREMENT':
@@ -18,7 +18,9 @@ const store = createStore((state = { count: 0 }, action) => {
     default:
       return state
   }
-})
+}
+
+const store = createStore(reducer)
 
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState())
