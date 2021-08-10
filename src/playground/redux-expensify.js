@@ -75,5 +75,7 @@ const user = {
 }
 
 console.log({
-  ...alex,
+  ...user,
+  age: 41,
+  city: 'Boston',
 })
