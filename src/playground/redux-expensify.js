@@ -68,3 +68,12 @@ const expense2 = store.dispatch(
 )
 
 store.dispatch(removeExpense(expense1.expense.id))
+
+const user = {
+  name: 'Alex',
+  age: 40,
+}
+
+console.log({
+  ...alex,
+})
