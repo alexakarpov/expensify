@@ -25,13 +25,10 @@ const removeExpense = (id) => ({
 const expensesDefaultState = []
 
 const expenseReducer = (state = expensesDefaultState, action) => {
-  console.log(`got action ${action.type}`)
-  action.id && console.log(`got id ${action.id}`)
   switch (action.type) {
     case 'ADD_EXPENSE':
       return [...state, action.expense]
     case 'REMOVE_EXPENSE':
-      console.log(`filtering by id ${action.id}`)
       return state.filter(({ id }) => id !== action.id)
     default:
       return state
@@ -66,10 +63,8 @@ store.subscribe(() => {
 const expense1 = store.dispatch(
   addExpense({ description: 'rent', amount: 100 })
 )
-console.log(expense1.expense)
 const expense2 = store.dispatch(
   addExpense({ description: 'coffee', amount: 300 })
 )
-console.log(expense2.expense)
 
 store.dispatch(removeExpense(expense1.expense.id))
