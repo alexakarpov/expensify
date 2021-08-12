@@ -22,14 +22,27 @@ const removeExpense = (id) => ({
   id,
 })
 
+const editExpense = (id, obj) => ({
+  type: 'EDIT_EXPENSE',
+  id,
+  updates: obj,
+})
+
 const expensesDefaultState = []
 
 const expenseReducer = (state = expensesDefaultState, action) => {
+  console.log('got action', action)
   switch (action.type) {
     case 'ADD_EXPENSE':
       return [...state, action.expense]
     case 'REMOVE_EXPENSE':
       return state.filter(({ id }) => id !== action.id)
+    case 'EDIT_EXPENSE':
+      console.log('updating', action.id)
+      console.log('with', action.updates)
+      return state.map((ex) =>
+        ex.id === action.id ? { ...ex, ...action.updates } : ex
+      )
     default:
       return state
   }
@@ -44,6 +57,8 @@ const filtersDefaultState = {
 
 const filtersReducer = (state = filtersDefaultState, action) => {
   switch (action.type) {
+    case "SET_TEXT_FILTER":
+      return []
     default:
       return state
   }
@@ -57,6 +72,7 @@ const store = createStore(
 )
 
 store.subscribe(() => {
+  console.log('change detected')
   console.log(store.getState())
 })
 
@@ -68,14 +84,5 @@ const expense2 = store.dispatch(
 )
 
 store.dispatch(removeExpense(expense1.expense.id))
-
-const user = {
-  name: 'Alex',
-  age: 40,
-}
-
-console.log({
-  ...user,
-  age: 41,
-  city: 'Boston',
-})
+console.log('=================')
+store.dispatch(editExpense(expense2.expense.id, { amount: 900 }))
