@@ -17,4 +17,6 @@ const state = store.getState()
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
 console.log(visibleExpenses)
 
-ReactDOM.render(AppRouter, document.getElementById('root'))
+const jsx = <AppRouter />
+
+ReactDOM.render(jsx, document.getElementById('root'))
