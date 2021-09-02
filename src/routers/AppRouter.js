@@ -8,7 +8,7 @@ import EditExpensePage from '../components/EditExpensePage'
 import PageNotFound from '../components/PageNotFound'
 import Header from '../components/Header'
 
-const AppRouter = (
+const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header></Header>
