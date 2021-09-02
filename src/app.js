@@ -1,29 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'normalize.css/normalize.css'
-import './styles/styles.scss'
-import configureStore from './store/configureStore'
+import { Provider } from 'react-redux'
 import AppRouter from './routers/AppRouter'
+import configureStore from './store/configureStore'
 import { addExpense } from './actions/expenses'
 import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
-import { Provider } from 'react-redux'
+import 'normalize.css/normalize.css'
+import './styles/styles.scss'
 
 const store = configureStore()
-store.dispatch(
-  addExpense({ description: 'Water bill', amount: 50, createdAt: 129 })
-)
-store.dispatch(
-  addExpense({ description: 'Gas bill', amount: 90, createdAt: 126 })
-)
-store.dispatch(
-  addExpense({ description: 'Coffee', amount: 40, createdAt: 123 })
-)
-store.dispatch(setTextFilter('bill'))
 
-// setTimeout(() => {
-//   store.dispatch(setTextFilter('water'))
-// }, 3000)
+store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }))
+store.dispatch(addExpense({ description: 'Gas bill' }))
+store.dispatch(setTextFilter('water'))
+
+setTimeout(() => {
+  store.dispatch(setTextFilter('bill'))
+}, 3000)
 
 const state = store.getState()
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
@@ -35,4 +29,4 @@ const jsx = (
   </Provider>
 )
 
-ReactDOM.render(jsx, document.getElementById('root'))
+ReactDOM.render(jsx, document.getElementById('app'))

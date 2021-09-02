@@ -1,11 +1,13 @@
-const filtersDefaultState = {
+// Filters Reducer
+
+const filtersReducerDefaultState = {
   text: '',
-  sortBy: 'date', //date or amount
+  sortBy: 'date',
   startDate: undefined,
   endDate: undefined,
 }
 
-export default (state = filtersDefaultState, action) => {
+export default (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
     case 'SET_TEXT_FILTER':
       return {
