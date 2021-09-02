@@ -1,5 +1,5 @@
 import React from 'react'
 
-const HelpPage = () => <h1>Help</h1>
+const HelpPage = () => <div>This is from my help component</div>
 
 export default HelpPage

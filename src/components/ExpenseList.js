@@ -5,17 +5,14 @@ import selectExpenses from '../selectors/expenses'
 
 const ExpenseList = (props) => (
   <div>
-    <ol>
-      {props.expenses.map((expense) => {
-        return <ExpenseListItem key={expense.id} {...expense} />
-      })}
-    </ol>
+    <h1>Expense List</h1>
+    {props.expenses.map((expense) => {
+      return <ExpenseListItem key={expense.id} {...expense} />
+    })}
   </div>
 )
 
 const mapStateToProps = (state) => {
-  console.log('EXPENSES:', state.expenses)
-  console.log('FILTERS:', state.filters)
   return {
     expenses: selectExpenses(state.expenses, state.filters),
   }

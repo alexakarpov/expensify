@@ -2,12 +2,7 @@ import React from 'react'
 
 const EditExpensePage = (props) => {
   console.log(props)
-  return (
-    <div>
-      <h1>Edit Expense</h1>
-      <p>with id of {props.match.params.id}</p>
-    </div>
-  )
+  return <div>Editing the expense with id of {props.match.params.id}</div>
 }
 
 export default EditExpensePage
