@@ -31,4 +31,4 @@ deploy:
 script:
   - zip -r public *
   - mkdir -p dpl_cd_upload
-  - mv latest.zip dpl_cd_upload/public.zip
+  - mv public.zip dpl_cd_upload/public.zip
