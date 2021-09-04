@@ -4,31 +4,30 @@ node_js:
   - '12.22.5'
 install:
   - yarn install -s
-script:
-#  - yarn test
-  - yarn build -p
 deploy:
-- provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  local_dir: dpl_cd_upload
-  skip_cleanup: true
-  on: &repov
-    repo: alexakarpov/expensify
-    branch: main
-  bucket: htmshop
-  region: us-east-1
-- provider: codedeploy
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: htmshop
-  key: public.zip
-  bundle_type: zip
-  application: HTMShopFrontend
-  deployment_group: HTMShopFrontendDG
-  region: us-east-1
-  on: *repov
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    local_dir: dpl_cd_upload
+    skip_cleanup: true
+    on: &repov
+      repo: alexakarpov/expensify
+      branch: main
+    bucket: htmshop
+    region: us-east-1
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: htmshop
+    key: public.zip
+    bundle_type: zip
+    application: HTMShopFrontend
+    deployment_group: HTMShopFrontendDG
+    region: us-east-1
+    on: *repov
 script:
+  - yarn test
+  - yarn build -p
   - zip -qr public.zip public
   - mkdir -p dpl_cd_upload
   - mv public.zip dpl_cd_upload/public.zip
