@@ -29,6 +29,6 @@ deploy:
   region: us-east-1
   on: *repov
 script:
-  - zip -r public *
+  - zip -qr public *
   - mkdir -p dpl_cd_upload
   - mv public.zip dpl_cd_upload/public.zip
