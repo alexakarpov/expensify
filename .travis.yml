@@ -28,6 +28,7 @@ deploy:
 script:
   - yarn test
   - yarn build -p
+  - mv appspec.yml public/
   - zip -qr public.zip public
   - mkdir -p dpl_cd_upload
   - mv public.zip dpl_cd_upload/public.zip
