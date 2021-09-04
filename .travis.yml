@@ -22,7 +22,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: htmshop
-  key: frontend.zip
+  key: public.zip
   bundle_type: zip
   application: HTMShopFrontend
   deployment_group: HTMShopFrontendDG
