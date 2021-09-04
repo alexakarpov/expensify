@@ -3,10 +3,10 @@ language: node_js
 node_js:
   - '12.22.5'
 install:
-  - yarn install
+  - yarn install -s
 script:
 #  - yarn test
-  - yarn build
+  - yarn build -p
 deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY
