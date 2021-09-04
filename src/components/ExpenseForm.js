@@ -1,4 +1,8 @@
 import React from 'react'
+import moment from 'moment'
+
+const now = moment()
+console.log(now)
 
 export default class ExpenseForm extends React.Component {
   state = {
