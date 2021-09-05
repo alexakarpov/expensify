@@ -1,5 +1,5 @@
-import { v4 as uuid } from 'uuid'
-
+import uuid from 'uuid'
+import moment from 'moment'
 // ADD_EXPENSE
 export const addExpense = ({
   description = '',
@@ -13,7 +13,7 @@ export const addExpense = ({
     description,
     note,
     amount,
-    createdAt,
+    createdAt: moment.now(),
   },
 })
 

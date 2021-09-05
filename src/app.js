@@ -6,32 +6,21 @@ import configureStore from './store/configureStore'
 import { addExpense } from './actions/expenses'
 import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
+import moment from 'moment'
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
 const store = configureStore()
 
-store.dispatch(
-  addExpense({ description: 'Coffee', amount: 1700, createdAt: 3456 })
-)
-
-store.dispatch(
-  addExpense({ description: 'Water bill', amount: 5500, createdAt: 1234 })
-)
-
-store.dispatch(
-  addExpense({ description: 'Gas bill', amount: 4500, createdAt: 2345 })
-)
-
-//store.dispatch(setTextFilter('bill'))
-
-// setTimeout(() => {
-//   store.dispatch(setTextFilter('co'))
-// }, 3000)
+store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }))
+store.dispatch(addExpense({ description: 'Gas bill', createdAt: 1000 }))
+store.dispatch(addExpense({ description: 'Rent', amount: 109500 }))
 
 const state = store.getState()
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
 console.log(visibleExpenses)
+
+console.log(moment.now())
 
 const jsx = (
   <Provider store={store}>
