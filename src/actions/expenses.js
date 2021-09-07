@@ -5,7 +5,7 @@ export const addExpense = ({
   description = '',
   note = '',
   amount = 0,
-  createdAt = 0,
+  createdAt = moment.now(),
 } = {}) => ({
   type: 'ADD_EXPENSE',
   expense: {
@@ -13,7 +13,7 @@ export const addExpense = ({
     description,
     note,
     amount,
-    createdAt: moment.now(),
+    createdAt,
   },
 })
 
