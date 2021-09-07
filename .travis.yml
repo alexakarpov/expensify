@@ -27,6 +27,7 @@ deploy:
     on: *repov
 script:
   - yarn build -p
+  - yarn test
   - mv appspec.yml public/
   - zip -qr public.zip public
   - mkdir -p dpl_cd_upload
