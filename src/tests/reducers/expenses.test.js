@@ -32,3 +32,8 @@ test('should edit an expense', () => {
   const state = expensesReducer(expenses, editExpense('1', { note: 'edited' }))
   expect(state[0].note).toEqual('edited')
 })
+
+test('should not edit an expense with wrong id', () => {
+  const state = expensesReducer(expenses, editExpense('x', { note: 'edited' }))
+  expect(state).toEqual(expenses)
+})
