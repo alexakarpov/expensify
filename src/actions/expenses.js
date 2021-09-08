@@ -18,9 +18,9 @@ export const addExpense = ({
 })
 
 // REMOVE_EXPENSE
-export const removeExpense = ({ id } = {}) => ({
+export const removeExpense = (id) => ({
   type: 'REMOVE_EXPENSE',
-  id,
+  id: id,
 })
 
 // EDIT_EXPENSE
