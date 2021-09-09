@@ -25,8 +25,6 @@ test('should set up addExpense action object with provided values', () => {
     amount: 123,
     description: 'foo',
     note: 'bar',
-    //rogue: 'hi',
-    //createdAt: 1000,
   }
 
   const action = addExpense(payload)

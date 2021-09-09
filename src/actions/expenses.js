@@ -6,7 +6,6 @@ export const addExpense = ({
   note = '',
   amount = 0,
   createdAt = moment.now(),
-  rogue = '',
 } = {}) => ({
   type: 'ADD_EXPENSE',
   expense: {
