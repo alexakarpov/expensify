@@ -1,4 +1,5 @@
 import { addExpense, removeExpense, editExpense } from '../../actions/expenses'
+import moment, { Moment } from 'moment'
 
 test('should set up removeExpense action object', () => {
   const action = removeExpense('abc123')
@@ -24,14 +25,17 @@ test('should set up addExpense action object with provided values', () => {
     amount: 123,
     description: 'foo',
     note: 'bar',
-    createdAt: 1000,
+    //rogue: 'hi',
+    //createdAt: 1000,
   }
 
   const action = addExpense(payload)
+  console.log(action)
   expect(action).toEqual({
     type: 'ADD_EXPENSE',
     expense: {
       ...payload,
+      createdAt: expect.any(Number),
       id: expect.any(String),
     },
   })
