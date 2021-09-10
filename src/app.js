@@ -28,8 +28,6 @@ console.log('^active filters')
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
 console.log('visible expenses:', visibleExpenses)
 
-console.log(moment.now())
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
