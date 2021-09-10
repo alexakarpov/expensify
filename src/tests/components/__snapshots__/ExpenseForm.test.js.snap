@@ -33,6 +33,7 @@ exports[`renders error for an invalid form submission 1`] = `
       horizontalMargin={0}
       id="date"
       initialVisibleMonth={null}
+      inputIconPosition="before"
       isDayBlocked={[Function]}
       isDayHighlighted={[Function]}
       isOutsideRange={[Function]}
@@ -41,15 +42,17 @@ exports[`renders error for an invalid form submission 1`] = `
       monthFormat="MMMM YYYY"
       navNext={null}
       navPrev={null}
-      numberOfMonths={1}
+      numberOfMonths={4}
       onClose={[Function]}
       onDateChange={[Function]}
       onFocusChange={[Function]}
       onNextMonthClick={[Function]}
       onPrevMonthClick={[Function]}
+      openDirection="down"
       orientation="horizontal"
       phrases={
         Object {
+          "calendarLabel": "Calendar",
           "chooseAvailableDate": [Function],
           "clearDate": "Clear Date",
           "closeDatePicker": "Close",
@@ -87,6 +90,7 @@ exports[`renders error for an invalid form submission 1`] = `
       screenReaderInputMessage=""
       showClearDate={false}
       showDefaultInputIcon={false}
+      weekDayFormat="dd"
       withFullScreenPortal={false}
       withPortal={false}
     />
@@ -138,6 +142,7 @@ exports[`renders error for an invalid form submission 2`] = `
       horizontalMargin={0}
       id="date"
       initialVisibleMonth={null}
+      inputIconPosition="before"
       isDayBlocked={[Function]}
       isDayHighlighted={[Function]}
       isOutsideRange={[Function]}
@@ -146,15 +151,17 @@ exports[`renders error for an invalid form submission 2`] = `
       monthFormat="MMMM YYYY"
       navNext={null}
       navPrev={null}
-      numberOfMonths={1}
+      numberOfMonths={4}
       onClose={[Function]}
       onDateChange={[Function]}
       onFocusChange={[Function]}
       onNextMonthClick={[Function]}
       onPrevMonthClick={[Function]}
+      openDirection="down"
       orientation="horizontal"
       phrases={
         Object {
+          "calendarLabel": "Calendar",
           "chooseAvailableDate": [Function],
           "clearDate": "Clear Date",
           "closeDatePicker": "Close",
@@ -192,6 +199,7 @@ exports[`renders error for an invalid form submission 2`] = `
       screenReaderInputMessage=""
       showClearDate={false}
       showDefaultInputIcon={false}
+      weekDayFormat="dd"
       withFullScreenPortal={false}
       withPortal={false}
     />
@@ -240,6 +248,7 @@ exports[`renders the ExpenseForm with data 1`] = `
       horizontalMargin={0}
       id="date"
       initialVisibleMonth={null}
+      inputIconPosition="before"
       isDayBlocked={[Function]}
       isDayHighlighted={[Function]}
       isOutsideRange={[Function]}
@@ -248,15 +257,17 @@ exports[`renders the ExpenseForm with data 1`] = `
       monthFormat="MMMM YYYY"
       navNext={null}
       navPrev={null}
-      numberOfMonths={1}
+      numberOfMonths={4}
       onClose={[Function]}
       onDateChange={[Function]}
       onFocusChange={[Function]}
       onNextMonthClick={[Function]}
       onPrevMonthClick={[Function]}
+      openDirection="down"
       orientation="horizontal"
       phrases={
         Object {
+          "calendarLabel": "Calendar",
           "chooseAvailableDate": [Function],
           "clearDate": "Clear Date",
           "closeDatePicker": "Close",
@@ -294,6 +305,7 @@ exports[`renders the ExpenseForm with data 1`] = `
       screenReaderInputMessage=""
       showClearDate={false}
       showDefaultInputIcon={false}
+      weekDayFormat="dd"
       withFullScreenPortal={false}
       withPortal={false}
     />
@@ -342,6 +354,7 @@ exports[`renders the ExpenseForm without data 1`] = `
       horizontalMargin={0}
       id="date"
       initialVisibleMonth={null}
+      inputIconPosition="before"
       isDayBlocked={[Function]}
       isDayHighlighted={[Function]}
       isOutsideRange={[Function]}
@@ -350,15 +363,17 @@ exports[`renders the ExpenseForm without data 1`] = `
       monthFormat="MMMM YYYY"
       navNext={null}
       navPrev={null}
-      numberOfMonths={1}
+      numberOfMonths={4}
       onClose={[Function]}
       onDateChange={[Function]}
       onFocusChange={[Function]}
       onNextMonthClick={[Function]}
       onPrevMonthClick={[Function]}
+      openDirection="down"
       orientation="horizontal"
       phrases={
         Object {
+          "calendarLabel": "Calendar",
           "chooseAvailableDate": [Function],
           "clearDate": "Clear Date",
           "closeDatePicker": "Close",
@@ -396,6 +411,7 @@ exports[`renders the ExpenseForm without data 1`] = `
       screenReaderInputMessage=""
       showClearDate={false}
       showDefaultInputIcon={false}
+      weekDayFormat="dd"
       withFullScreenPortal={false}
       withPortal={false}
     />
