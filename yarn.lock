@@ -51,7 +51,7 @@ acorn@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
 
-airbnb-prop-types@^2.16.0:
+airbnb-prop-types@^2.16.0, airbnb-prop-types@^2.8.1:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/airbnb-prop-types/-/airbnb-prop-types-2.16.0.tgz#b96274cefa1abb14f623f804173ee97c13971dc2"
   integrity sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==
@@ -65,19 +65,6 @@ airbnb-prop-types@^2.16.0:
     prop-types "^15.7.2"
     prop-types-exact "^1.2.0"
     react-is "^16.13.1"
-
-airbnb-prop-types@^2.5.4:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/airbnb-prop-types/-/airbnb-prop-types-2.8.0.tgz#f77b1d166c105241f0f3ccb25554f04ed7700c6c"
-  dependencies:
-    array.prototype.find "^2.0.4"
-    function.prototype.name "^1.0.3"
-    has "^1.0.1"
-    is-regex "^1.0.4"
-    object.assign "^4.0.4"
-    object.entries "^1.0.4"
-    prop-types "^15.5.10"
-    prop-types-exact "^1.1.1"
 
 ajv-keywords@^2.0.0:
   version "2.1.0"
@@ -237,13 +224,6 @@ array.prototype.filter@^1.0.0:
     es-abstract "^1.18.0"
     es-array-method-boxes-properly "^1.0.0"
     is-string "^1.0.5"
-
-array.prototype.find@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/array.prototype.find/-/array.prototype.find-2.0.4.tgz#556a5c5362c08648323ddaeb9de9d14bc1864c90"
-  dependencies:
-    define-properties "^1.1.2"
-    es-abstract "^1.7.0"
 
 array.prototype.find@^2.1.1:
   version "2.1.1"
@@ -1569,9 +1549,10 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
-consolidated-events@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/consolidated-events/-/consolidated-events-1.1.0.tgz#2ee7aa59c2b346e00c58d324433ace3c47129221"
+consolidated-events@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/consolidated-events/-/consolidated-events-1.1.1.tgz#25395465b35e531395418b7bbecb5ecaf198d179"
+  integrity sha1-JTlUZbNeUxOVQYt7vsteyvGY0Xk=
 
 constants-browserify@^1.0.0:
   version "1.0.0"
@@ -2186,7 +2167,7 @@ es-abstract@^1.17.4, es-abstract@^1.18.0, es-abstract@^1.18.0-next.1, es-abstrac
     string.prototype.trimstart "^1.0.4"
     unbox-primitive "^1.0.1"
 
-es-abstract@^1.6.1, es-abstract@^1.7.0:
+es-abstract@^1.6.1:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.8.0.tgz#3b00385e85729932beffa9163bbea1234e932914"
   dependencies:
@@ -2649,14 +2630,6 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
-
-function.prototype.name@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.0.3.tgz#0099ae5572e9dd6f03c97d023fd92bcc5e639eac"
-  dependencies:
-    define-properties "^1.1.2"
-    function-bind "^1.1.0"
-    is-callable "^1.1.3"
 
 function.prototype.name@^1.1.2, function.prototype.name@^1.1.3:
   version "1.1.4"
@@ -4430,15 +4403,6 @@ object.assign@^4.1.0, object.assign@^4.1.2:
     has-symbols "^1.0.1"
     object-keys "^1.1.1"
 
-object.entries@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.0.4.tgz#1bf9a4dd2288f5b33f3a993d257661f05d161a5f"
-  dependencies:
-    define-properties "^1.1.2"
-    es-abstract "^1.6.1"
-    function-bind "^1.1.0"
-    has "^1.0.1"
-
 object.entries@^1.1.1, object.entries@^1.1.2:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.4.tgz#43ccf9a50bc5fd5b649d45ab1a579f24e088cafd"
@@ -5023,13 +4987,6 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types-exact@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/prop-types-exact/-/prop-types-exact-1.1.1.tgz#c2620207e4f77f9762fa1835b0387a464bd08978"
-  dependencies:
-    has "^1.0.1"
-    object.assign "^4.0.4"
-
 prop-types-exact@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/prop-types-exact/-/prop-types-exact-1.2.0.tgz#825d6be46094663848237e3925a98c6e944e9869"
@@ -5191,19 +5148,20 @@ react-addons-shallow-compare@15.6.0:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-dates@12.3.0:
-  version "12.3.0"
-  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-12.3.0.tgz#430e5736bc655a21d9e40ab24b07b0d17d0df80a"
+react-dates@12.7.0:
+  version "12.7.0"
+  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-12.7.0.tgz#58048317c627d6406376aedbe7aed05bed18d319"
+  integrity sha512-lP4jGJ+2KMTq1fo+5isv7zB/tvEboT3YQy6asLPJKRpnYFI3h1fJyZdQ+kYlfnwH2bezMSnwXp95lmXwfOJn6Q==
   dependencies:
-    airbnb-prop-types "^2.5.4"
+    airbnb-prop-types "^2.8.1"
     classnames "^2.2.5"
-    consolidated-events "^1.0.1"
+    consolidated-events "^1.1.0"
     is-touch-device "^1.0.1"
     lodash "^4.1.1"
     object.assign "^4.0.4"
     object.values "^1.0.4"
     prop-types "^15.5.10"
-    react-moment-proptypes "^1.4.0"
+    react-moment-proptypes "^1.5.0"
     react-portal "^3.1.0"
 
 react-dom-factories@^1.0.0:
@@ -5233,9 +5191,10 @@ react-modal@2.2.2:
     prop-types "^15.5.10"
     react-dom-factories "^1.0.0"
 
-react-moment-proptypes@^1.4.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/react-moment-proptypes/-/react-moment-proptypes-1.5.0.tgz#4a448cd6479efc5dd509283f361f3753c3abe60e"
+react-moment-proptypes@^1.5.0:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/react-moment-proptypes/-/react-moment-proptypes-1.8.1.tgz#7ba4076147f6b5998f0d4f51d302d6d8c62049fd"
+  integrity sha512-Er940DxWoObfIqPrZNfwXKugjxMIuk1LAuEzn23gytzV6hKS/sw108wibi9QubfMN4h+nrlje8eUCSbQRJo2fQ==
   dependencies:
     moment ">=1.6.0"
 
