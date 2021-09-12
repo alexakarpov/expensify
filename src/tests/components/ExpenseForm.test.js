@@ -71,18 +71,21 @@ test('Should ignore change to amount with bad value', () => {
 })
 
 test('should call onSubmit prop on valid form submission', () => {
-  const onSubmitSpy = jest.fn()
+  const onSubmitSpy = jest.fn(() => {
+    console.log('SPY SAYS HI')
+  })
 
   let testEx = expenses[0]
   delete testEx.id
 
   const wrapper = shallow(
-    <ExpenseForm expense={expenses[0]} onSubmit={onSubmitSpy}></ExpenseForm>
+    <ExpenseForm expense={testEx} onSubmit={onSubmitSpy}></ExpenseForm>
   )
   wrapper.find('form').simulate('submit', {
     preventDefault: () => {},
   })
-  expect(onSubmitSpy).toHaveBeenCalledWith(testEx)
+  expect(wrapper.state('error')).toBe('')
+  expect(onSubmitSpy).toHaveBeenLastCalledWith(testEx)
 })
 
 test('should set new date on dateChange', () => {
@@ -90,4 +93,12 @@ test('should set new date on dateChange', () => {
   const now = moment()
   wrapper.find('SingleDatePicker').prop('onDateChange')(now)
   expect(wrapper.state('createdAt')).toEqual(now)
+})
+
+test('onFocusChange sets calendar focused', () => {
+  const wrapper = shallow(<ExpenseForm></ExpenseForm>)
+  wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused: false })
+  expect(wrapper.state('calendarFocused')).toEqual(false)
+  wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused: true })
+  expect(wrapper.state('calendarFocused')).toEqual(true)
 })
